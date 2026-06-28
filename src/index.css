@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    background-image:
+      linear-gradient(rgba(22, 25, 28, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(22, 25, 28, 0.025) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+@layer components {
+  /* Timbro "CRITICO" inclinato in stile archivio */
+  .timbro {
+    @apply inline-flex items-center gap-1 border-2 border-critico text-critico
+      font-mono font-bold uppercase tracking-widest px-2 py-0.5 text-[10px]
+      rounded-sm;
+    transform: rotate(-4deg);
+  }
+}
